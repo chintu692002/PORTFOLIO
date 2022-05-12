@@ -1,0 +1,371 @@
+*
+{
+  margin:0;
+ padding: 0;
+
+ 
+}
+body{
+  background-color: black;
+  color: white;
+}
+/*.hero-image {
+  /*background-image: url("pexels-felix-mittermeier-956999.jpg");*/
+ /* background-color: black;
+  color: white;/*IT IS USED WHEN THE IMAGE IS UNAVAILABLE*/
+  /*height: 600px;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:cover;/* Resize the background image to cover the entire container */
+  /*position: relative;
+  transition: 0.5s ease-in-out;
+  
+  
+}*/
+
+.hero-text {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size:x-large;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  /*color: white;*/
+}
+.navbar
+{
+  /*color: white;*/
+  font-weight: 200;
+ 
+  
+}
+.navbar li{/* navbar ke within li karaoge toh nhi hoga alag se karna padega*/
+  float:left;
+ list-style: none;
+ margin:23px 23px;
+ padding: 25px 25px;
+ /*color: white;*/
+
+
+}
+.navbar li a{
+  padding:13px 13px;
+  margin: 30px;
+  top: 30%;
+  text-decoration: none;
+  font-weight: 500;
+  font-style: normal;
+  color: aliceblue;
+  
+}
+/*.navbar li a:hover{
+color:#FF9F55;
+}*/
+.pic
+{ 
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+  .but {
+    background-color: white;
+    border: 2px solid #4CAF50;;
+    color: black;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .but:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .light-mode {
+    background-color: white;
+    color: black;
+  }
+  .light-mode .timeline::after
+  {
+    background-color: black;
+    color: white;
+  }
+  .light-mode .content
+  {
+    background-color: burlywood;
+    color: white;
+  }
+  .light-mode button
+{
+  background-color: black;
+  color: white;
+}
+.light-mode .navbar li a{
+  color: black;
+}
+.light-mode .project {
+  color: black;
+}
+.light-mode .postion {
+  color: black;
+}
+  .tog
+  {
+    position:absolute;
+    top: 7%;
+    left:80%;
+  }
+button{
+  background-color: white;
+  color: black;
+  padding: 10px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+}
+.education{
+font-family: 'Times New Roman', Times, serif;
+font-size: 30px;
+font-weight: 500;
+position: absolute;
+  top: 90%;
+  left: 10%;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white ;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -4px;
+}
+
+/* Container around content */
+.container {
+  padding: 1px 40px;
+  margin: 8 px;
+  height: 10px;
+  width: 20px;
+  position: relative;
+  background-color: inherit;
+  width: 31%;
+  height: 5%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid orchid;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 25px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid inherit;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent inherit;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid inherit;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent inherit transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 2px 2px;
+  background-color:whitesmoke;
+  color: black;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 50%;
+    padding-left: 50px;
+    padding-right: 15px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+.project
+{
+  position: absolute;
+  top: 90%;
+  left: 55%;
+}
+.project {
+ color:white;
+  
+}
+.postion 
+{
+  position: absolute;
+  top: 180%;
+  left: 55%;
+}
+.Accomplishment
+{
+  position: absolute;
+  top: 240%;
+  left: 55%;
+}
+
+/*.flex-container > div {
+  background-color: #eb2929;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+}*/
+.footer
+{
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: 290%;
+  padding-left: 2%;
+  width:100%;
+}
+.light-mode .footer
+{
+  background-color: black;
+  color: white;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-right: -15px;
+  margin-left: 5px;
+}
+#submit{
+  background-color: purple;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+}
+.fa.fa-github
+{ padding: 40px;
+color: black;
+}
+.light-mode .fa.fa-github
+{
+  color: white;
+}
+.fa.fa-linkedin
+{ padding: 40px;
+color: black;
+}
+.light-mode .fa.fa-linkedin
+{
+  color: white;
+}
+.fa.fa-facebook
+{ padding: 40px;
+color: black;
+}
+.light-mode .fa.fa-facebook
+{
+  color: white;
+}
+.fa.fa-whatsapp
+{ padding: 40px;
+color: black;
+}
+.light-mode .fa.fa-whatsapp
+{
+  color: white;
+}
+.icons
+{
+  position: absolute;
+  top: 10%;
+  left: 55%;
+ 
+}
